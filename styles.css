@@ -1,0 +1,159 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    direction: rtl; /* تحديد اتجاه الكتابة من اليمين لليسار */
+    text-align: right; /* محاذاة النصوص إلى اليمين */
+}
+
+.container {
+    width: 90%; /* تكيف العرض مع حجم الشاشة */
+    max-width: 1200px; /* الحد الأقصى للعرض */
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.header {
+    position: relative;
+    height: 20vh; /* ارتفاع نسبي لتكييفه مع الشاشة */
+    text-align: left;
+}
+
+.logo-background {
+    background: url('Logo.png') no-repeat left top; /* استخدام الصورة كخلفية */
+    background-size: 15vw; /* حجم الشعار المناسب */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15vw; /* عرض الشعار */
+    height: 15vw; /* ارتفاع الشعار */
+    z-index: 1; /* يظهر خلف النص */
+}
+
+.price-text {
+    font-size: 5vw; /* حجم النص النسبي */
+    margin: 0;
+    position: absolute;
+    top: 3vh;
+    left:8vw;
+    z-index: 2; /* يظهر فوق الشعار */
+}
+
+.ch-text {
+    font-size: 4vw; /* حجم النص النسبي */
+    margin: 0;
+    position: absolute;
+    top: 15vh;
+    left:0;
+    z-index: 2; /* يظهر فوق الشعار */
+}
+
+.section {
+    margin: 5vh 0;
+}
+
+.section h3 {
+    font-size: 2.5vw;
+}
+
+.section h4 {
+    font-size: 2vw;
+    margin-bottom: 2vh;
+}
+
+.section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.section ul li {
+    margin: 2vh 0;
+    font-size: 1.8vw;
+    line-height: 1.5;
+}
+
+.pricing {
+    margin: 5vh 0;
+}
+
+.pricing h3 {
+    font-size: 2.5vw;
+}
+
+.pricing table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2vh 0;
+}
+
+.pricing table th, .pricing table td {
+    border: 1px solid #fff;
+    padding: 1vh 1vw;
+    text-align: right; /* محاذاة النصوص داخل الجدول إلى اليمين */
+}
+
+.total-cost {
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    padding: 2vh;
+    margin: 2vh 0;
+    font-size: 2vw;
+}
+
+.total-cost span {
+    font-size: 3vw;
+    font-weight: bold;
+    display: block;
+}
+
+.duration {
+    margin: 5vh 0;
+}
+
+footer {
+    text-align: center;
+    margin-top: 5vh;
+    font-size: 1.5vw;
+}
+
+/* استخدام media queries لضبط التصميم لأحجام الشاشات المختلفة */
+@media (max-width: 768px) {
+    .price-text {
+        font-size: 8vw;
+        left: 5vw;
+    }
+
+    .ch-text {
+        font-size: 6vw;
+        top: 8vh;
+    }
+
+    .header {
+        height: 25vh;
+    }
+
+    .logo-background {
+        background-size: 20vw;
+        width: 20vw;
+        height: 20vw;
+    }
+
+    .section h3, .pricing h3 {
+        font-size: 4vw;
+    }
+
+    .section h4, .pricing table th, .pricing table td, .total-cost, footer {
+        font-size: 3vw;
+    }
+
+    .section ul li {
+        font-size: 3vw;
+    }
+}

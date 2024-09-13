@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Pricing Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="price-text">PRICE</h1>
+            <h2 class="ch-text">.CH</h2>
+            <div class="logo-background"></div>
+        </div>
+        <div class="section">
+            <h3>01 |</h3>
+            <h4>الخدمات المشمولة في الخدمة:</h4>
+            <ul>
+                <li>1- أخذ طلبات العميل ورغباته وتحديد المتطلبات الأساسية والثانوية.</li>
+                <li>2- جمع الأفكار وتحديد الطراز STYLE والنظام اللوني وعمل لوحة توضح الأفكار المقترحة للعميل لاعتماد الفكرة التصميمية.</li>
+                <li>3- تطبيق التصميم بصور ثنائية الأبعاد مماثلة للواقع وعرضها على العميل.</li>
+                <li>4- تقديم التعديلات اللازمة حتى يتم اعتماد التصميم النهائي.</li>
+                <li>5- تسليم مستندات التنفيذ والتعديلات والمتطلبات وجميع التفاصيل المطلوبة للتنفيذ.</li>
+            </ul>
+        </div>
+        <div class="pricing">
+            <h3>02 |</h3>
+            <p>تقدر قيمة المشروع وفق ما يلي:</p>
+            <table>
+                <tr>
+                    <th>اسم الفراغ/الدور</th>
+                    <th>المساحة (متر مربع)</th>
+                </tr>
+                <tr>
+                    <td><input type="text" id="spaceName" name="spaceName" required></td>
+                    <td><input type="number" id="area" name="area" required></td>
+                </tr>
+            </table>
+            <button type="button" onclick="calculate()">احسب التكلفة</button>
+            <div class="total-cost">
+                <p>التكلفة الإجمالية للتصميم</p>
+                <span id="totalCost">0 ريال سعودي</span>
+            </div>
+            <div class="duration">
+                <p>مدة العمل وفق ما يلي:</p>
+                <table>
+                    <tr>
+                        <th>الافكار المبدئية</th>
+                        <th>الرسوم ثلاثية الأبعاد</th>
+                        <th>مدة العمل</th>
+                    </tr>
+                    <tr>
+                        <td id="initialIdeas">-</td>
+                        <td id="threeDDesign">-</td>
+                        <td id="totalDays">-</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <footer>
+            <p>Haneen Mohammed | design and consulting</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
